@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>address.com</title>
+    <link rel="stylesheet" href="index.css">
+
+
+
+    <style>
+      
+
+
+      *{margin-left: 10px;
+font-family: "Open Sans", sans-serif;}
+
+body>a{text-decoration: none; }
+
+.heading{ width: 600px;
+         height: auto;}
+         
+#form{font-size: 17px;}
+
+#form>form>p{
+    margin-bottom:0px;}
+
+.heading>h1{
+    font: 400 28px Open Sans,sans-serif;
+    font-weight: 400;
+    font-size: 24px;}
+
+.heading>p{line-height: 22px;
+       font-size:16px ;}
+
+p{color: rgba(0, 0, 0, 0.836);}
+
+::placeholder{font-size: 16px;}
+
+#form{width: 600px;
+      height: auto;
+      margin-top: 20px;
+      display: flex;}
+#tick{
+     width: 100% ;
+    height:35px ;
+    margin: auto;}
+
+input{width: 100%;
+      height: 35px;
+      border-radius: 5px;}
+
+select{width:250px ;
+       height: 35px;
+       border-radius: 5px;}
+
+input>placeholder{font-size: 14px;}
+
+#billing{height: auto;
+         width: 600px;}
+         
+#billing>h1{font: 400 28px Open Sans,sans-serif;
+            font-weight: 400;
+            font-size: 22px;}
+button{ padding: 9px 15px 9px 15px;
+        color:#003953;
+        font-size: 15px;
+        font-weight: 600;
+        border: 2px solid  #003953;
+        border-radius:5px;
+        background-color:white;}
+button>a{color:#003953;
+      text-decoration: none;
+      padding: 10px 35px 10px 35px ;}
+
+.b_address>a:hover{background-color:#0076bd;
+               color: white;}
+               
+button:hover{background-color:#0076bd;
+             color: white;}
+
+.unit{margin-top: 20px;}
+#save{margin-top: 30px;}
+.tick{height:15px;
+      width: 15px;}
+       
+
+    </style>
+</head>
+<body>
+
+   
+    <div class="logozap">
+    <div> <a href="https://www.zappos.com/"><img  class="logo" alt="Zappos" src="https://m.media-amazon.com/images/G/01/zappos/melody/black-logo.svg"></a></div>
+    <a href="https://vrsnl.zappos.com" ><img  alt="Vrsnl" src="https://m.media-amazon.com/images/G/01/vrsnl/vrsnl-logo._CB1564076501_.svg"></a>
+    </div>
+    <div id="customer">
+        
+        <select > 
+         <option value="">Customer Service</option>
+        <option value="">Contact Info </option>
+        <option value="">FAQ</option>
+        <option value="">Give Us Feedback</option>
+       </select>
+    </div>
+  
+            <div id="zaplogo">
+                <img src="https://m.media-amazon.com/images/G/01/zappos/melody/zapposPBS._CB1509642213_.svg" alt="zappoos1">
+                <!-- <form method="GET" action="/search" class="e-z" data-search-container="true" role="search"><input type="search" name="term" id="searchAll" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded="true" value="" placeholder="Search for shoes, clothes, etc." accesskey="s" autocomplete="off" aria-controls="hfSearchSuggest" aria-owns="hfSearchSuggest"><label for="searchAll">Search for shoes, clothes, etc.</label><div data-search-suggestions="true" class="Q-z"><ul id="hfSearchSuggest" role="listbox"><li role="option" aria-selected="false" class=""><a href="/search/w%20new%20hire%20composite%20shoes">w new hire composite shoes</a></li><li role="option" aria-selected="false" class=""><a href="/search/women%20north%20face%20shies%2010%20w">women north face shies 10 w</a></li><li role="option" aria-selected="false" class=""><a href="/search/womens%20shoes%20size%2010%201%202%20w">womens shoes size 10 1 2 w</a></li><li role="option" aria-selected="false" class=""><a href="/search/womens%20sketcher%20w%20max%20elite%20cushion%20banham">womens sketcher w max elite cushion banham</a></li><li role="option" aria-selected="false" class=""><a href="/search/calvin%20klein%20quilted%20puffer%20vest%20w%20zip">calvin klein quilted puffer vest w zip</a></li><li role="option" aria-selected="false" class=""><a href="/search/packable%20puffer%20coats%20for%20w">packable puffer coats for w</a></li><li role="option" aria-selected="false" class=""><a href="/search/sandals%20w%20arch%20supports">sandals w arch supports</a></li><li role="option" aria-selected="false" class=""><a href="/search/sandals%20women%206%20w">sandals women 6 w</a></li><li role="option" aria-selected="false" class=""><a href="/search/size%2011%20w%20taupe">size 11 w taupe</a></li><li role="option" aria-selected="false" class=""><a href="/search/ted%20baker%20aleksi%20blazer%20w%20notched%20lapel">ted baker aleksi blazer w notched lapel</a></li></ul></div><button type="submit">Search</button></form> -->
+           </div>
+
+
+
+
+
+          
+            <a href="">Account Overview</a> 
+            <a href="payment_info.html">Payment information</a> 
+            <a href="index.html">Add New Payment</a>
+            <!-- haeding -->
+            <div class="heading">
+                <h1>Add New Address</h1>
+                <p>Please note that any changes you make now will not affect orders that you have already placed. 
+                If you have a question about the shipping address of a past order, please contact the <a href="https://www.zappos.com/c/contact-us">Zappos.com Customer Loyalty Team.</a></p>
+            </div>
+            
+             <div id="form" >
+                 <form id="forms">
+                     <p>Full Name</p>
+                     <input required type="text" placeholder="First and Last" id="name">
+                     <p>Street Address</p>
+                     <input required placeholder="1234 Street Name" id="address1">
+                     <input class="unit" placeholder="Apt/Unit#" id="address2">
+                     <p>City</p>
+                     <input required type="" placeholder="Enter City" id="city">
+                     <p>State/Region</p>
+                     <input required type="text" placeholder="State" id="state">
+                     <p>Country</p>
+                     <select id="coundry">
+                         <option>United State</option>
+                         <option>India</option>
+                     </select>
+                     <p>Zip</p>
+                     <input  id="zip" required type="number" placeholder="12345">
+                     <p>Phone</p>
+                     <input required type="number" placeholder="123-456-7890" id="phone">
+        
+                     <div id="save" class="heading" style="display:flex ;">
+                        <button class="b_address" > <a href="index.html">CANCEL</a></button>
+                        <!-- <button> SAVE</button> -->
+                        <input type="submit" value="SAVE" style="width:100px ;">
+                    </div>
+                        <h3>United State Shipping</h3>
+                        <p>Products can be shipped to all US States, Territories, and Military addresses. Most orders are shipped via UPS (United Parcel Service). FedEx may also be used, as needed. All packages going to Alaska, Hawaii, P.O. Boxes, military addresses (APO, FPO), or US territories (i.e. Guam, Puerto Rico) will be sent via USPS and do not qualify for 1-Business Day shipping.</p>
+                    
+                      
+                 </form>
+             </div>
+
+      
+        
+
+    <div class="bottom">
+        <div>
+            <h3>Make Zappos (Emails) Your New BFF!</h3>
+            <h4>Email</h4>
+            <input type="email" placeholder="Email Address">
+            <button>SUBSCRIBE TO ZAPPOS EMAILS</button>
+        </div>
+
+
+        <div id="secdev">
+            
+                <div>
+                    <h3 class="F-z">Explore Zappos</h3>
+                    <ul class="G-z">
+                        <li><a href="/c/brands">Brands</a></li>
+                        <li><a href="/c/clothing">Clothing</a></li>
+                        <li><a href="https://www.zappos.com/a/the-style-room/women/trends">The Style Room</a></li>
+                        <li><a href="/eyewear/CKzXAeICAQE.zso">Eyewear</a></li>
+                        <li><a href="/new-arrivals">New Arrivals</a></li>
+                        <li><a href="/null/OgKiDeICAQc.zso">Outdoor</a></li>
+                        <li><a href="/rideshop">Rideshop</a></li>
+                        <li><a href="/running-shoes">Running</a></li>
+                        <li><a href="/c/jackets">Jackets</a></li>
+                        <li><a href="/c/leather-jackets">Leather Jackets</a></li>
+                        <li><a href="/c/rain-jackets">Rain Jackets</a></li>
+                        <li><a href="/c/shoes">Shoes</a></li>
+                        <li><a href="/watches/CLHXAeICAQE.zso">Watches</a></li>
+                        <li><a href="/c/weddings">Wedding</a></li>
+                        <li><a href="/c/denim-jackets">Denim Jackets</a></li>
+                        <li><a href="/e/adaptive">Zappos Adaptive</a></li>
+                        <li><a href="/c/programs">Education &amp; Military Program</a></li>
+                        <li><a href="/c/fathers-day-gifts">Father's Day Gift Guide</a></li>
+                        <li><a href="/null">All Departments</a></li></ul>
+                    </div>
+
+        
+            <div>
+                <div><h3 class="F-z">Customer Service</h3><ul class="G-z"><li><a href="/general-questions">FAQs</a></li>
+                    <li><a href="/c/contact-us">Contact Info</a></li>
+                    <li><a href="/ayuda">¿Ayuda en español?</a></li>
+                    <li><a href="/c/shipping-and-returns">Shipping And Returns Policy</a></li>
+                    <li><a href="/c/prop65">About Proposition 65</a></li>
+                </ul><h3 class="F-z">Fit Info</h3><ul class="G-z">
+                    <li><a href="/measurement-guide">Measurement Guide</a></li>
+                    <li><a href="/c/shoe-size-conversion">Size Conversion Chart</a></li>
+                    <li><a href="/c/how-to-measure-your-bra-size">Measure Your Bra Size</a></li></ul></div>
+            </div>
+            <div>
+                <div><h3 class="F-z">About Zappos</h3><ul class="G-z"><li><a href="/about/?utm_campaign=zappos&amp;utm_medium=zappos-home&amp;utm_source=footer&amp;utm_content=text">About</a></li>
+                    <li><a href="https://www.zappos.com/e/zappos-one">Zappos ONE</a></li><li><a href="https://www.zappos.com/about/zappos-for-good">Zappos for Good</a></li><li><a href="https://zappos.app.link/0OcKfIPXTZ">Get the Zappos Mobile App</a></li>
+                    <li><a href="/c/prime-link">Amazon Prime Benefits</a></li><li><a href="/c/vip">Zappos VIP Benefits</a></li><li><a href="/c/poweredbyzappos">Powered by Zappos</a></li>
+                    <li><a href="/truth-about-zappos-coupons">Coupons</a></li><li><a href="/e/accessibility-statement">Accessibility Statement</a></li><li><a href="https://zapposinternal.qualtrics.com/jfe/form/SV_7O5XH7gMYC0Rdhs">Accessibility Survey</a></li>
+                    <li><a href="https://www.zappos.com/beyondthebox/">Beyond the Box Blog</a></li>
+                </ul><h3 class="F-z">Resources</h3><ul class="G-z"><li><a href="/associates-program">Associates Program</a></li><li><a href="/influencer-home">Influencer Program</a></li><li><a href="https://jobs.zappos.com">Jobs</a></li>
+                    <li><a href="/about/press-kit">Press Kit</a></li>
+                    <li><a href="/glossary">Glossary of Terms</a></li><li><a href="/site-map">Site Map</a></li></ul></div>
+            </div>
+            <div>
+                <div><div class="servay"><h3>Your Voice Matters</h3>
+
+                    <p>We'd love to learn more about your shopping experiences on Zappos.com and how we can improve!</p>
+                    
+                    <p><a href="https://www.zappos.com/survey/take/zappos-voc?source=mobile-footer">Take Survey</a></p>
+                    </div>
+                    <div class="aa-z"><h3>Connect With Us</h3><ul class="aa-z"><li><a href="https://www.facebook.com/zappos" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/zappos/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/zappos" rel="noopener noreferrer" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.pinterest.com/zappos" rel="noopener noreferrer" target="_blank">Pinterest</a></li>
+                        <li><a href="https://www.youtube.com/user/zappos" rel="noopener noreferrer" target="_blank">YouTube</a></li></ul></div></div>
+            </div>
+
+        </div>
+        <div>
+            <div class="terms"><ul class="qa-z"><li><a href="/terms-of-use">Terms of Use</a></li>
+                <li><a href="/c/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/c/fur-policy">Fur Policy</a></li>
+                <li><a href="/c/interest-based-ads-policy">Interest-Based Ads</a></li>
+                <li><a href="/c/contact-us">24/7 Customer Service (800) 927-7671</a></li></ul><div class="pa-z"><p>© 2009–2022 - Zappos.com LLC or its affiliates</p>
+            </div></div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+   document.querySelector("#forms").addEventListener("submit",submitfunction)
+
+
+personarr=JSON.parse(localStorage.getItem("address"))||[]
+function submitfunction(){
+    event.preventDefault()
+    // console.log("ok,fine")
+
+
+    addressobj={
+        personname:forms.name.value,
+
+        address1:forms.address1.value,
+
+        address2:forms.address2.value,
+        city:forms.city.value,
+
+        state:forms.state.value,
+        coundry:forms.coundry.value,
+        // state:forms.state.value,
+        zip:forms.zip.value,
+        phone:forms.phone.value,
+    }
+    personarr.push(addressobj)
+
+    // console.log(personarr)
+    localStorage.setItem("address",JSON.stringify(personarr))
+
+    window.location.href="payment.html"
+    console.log(personarr)
+   
+
+
+    }
+
+    
+</script>
+
+

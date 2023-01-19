@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+   <link rel="stylesheet" href="index.css">
+
+   <style>
+    #cartprice{
+        display: flex;
+       
+        margin: auto;
+       width: 46%;
+       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    #totelprice{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        width: 20%;
+        height: 200px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position:fixed;
+        right: 100px;
+        top: 0px;
+        color: red;
+        margin-top: 100px;
+        font-size: 25px;
+    }
+   
+#productdata{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+  }
+  #productdata img{
+    width: 60%;
+    margin: auto;
+  
+  }
+  #productdata>div{
+    margin: auto;
+    /* border: 1px solid red; */
+  width: 300px;
+  display: grid;
+  /* justify-content: space-around; */
+  
+  }
+  h2{
+    font-size: larger;
+    text-align: center;
+    margin-top: 10px;
+  }
+  p{
+    text-align: center; 
+  }
+  h3{
+    text-align: center; 
+  
+  }
+  #totelprice+button{
+    background-color: greenyellow;
+    color:rgba(50, 50, 93, 0.25) ;
+    position:fixed;
+        right: 100px;
+        top: 250px;
+        width: 250px;
+        height: 30px;
+       
+        cursor: pointer;
+        
+
+  }
+  #totelprice+button>a{
+    text-decoration: none;
+    color: rgb(2, 2, 67);
+  }
+   
+   </style>
+</head>
+<body>
+    <h2>My Cart</h2>
+<div id="cartprice">
+    <div id="productdata"></div>
+    <div id="totelprice"><h1 ></h1 >
+        
+    </div>
+    <button><a href="address.html"> PROCEED TO CHECKOUT</a></button>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+<script>
+
+var productes=document.querySelector("#productdata")
+accepted=JSON.parse(localStorage.getItem("cartdata")) || []
+let totelPrice=0
+function display(data){
+    // productes.innerHTML=""
+    let totelPrice=0
+
+data.forEach (function(elem){
+    totelPrice=totelPrice+Number(elem.price)
+    card=document.createElement("div")
+
+    img=document.createElement("img")
+    img.src=elem.img;
+    var title=document.createElement("h2")
+    title.innerText=elem.brand
+    var desc=document.createElement("p")
+    desc.innerText=elem.name
+    var category=document.createElement("h3")
+    category.innerText=elem.catagory
+    var price= document.createElement("h2")
+    price.innerText=elem.price
+    var delet=document.createElement("button")
+    delet.innerText="Delete"
+    delet.style.color="red"
+    delet.style.cursor="pointer"
+    delet.addEventListener("click",function(){
+        deletefunction(elem)
+    })
+   
+    card.append(img,title,desc,category,price,delet)
+
+    productes.append(card)
+
+})
+
+document.querySelector("#totelprice").innerText="Totel Price  ₹"+totelPrice
+// console.log()
+}
+
+
+display(accepted);
+
+
+function  deletefunction(elem,index)
+{
+    accepted.splice(index,1)
+    localStorage.setItem("cartdata",JSON.stringify(accepted))
+    window.location.reload()
+    // console.log("delete")
+}
+
+
+</script>

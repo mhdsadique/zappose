@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>singup</title>
+
+    <!-- <link rel="stylesheet" href="signin.html"> -->
+
+    <style>
+
+       
+     .signsorm{
+    width:80%;
+    margin: auto;
+    height:600px ;
+    /* border: 1px solid red; */
+    /* display: grid; */
+     /* align-items: center; */
+    /* justify-content: center;  */
+   
+    
+        }
+           
+     .signsorm>div{
+        
+    /* width:80%; */
+    margin: auto;
+    /* border: 1px solid red; */
+    display: flex; 
+     align-items: center; 
+     justify-content: center; 
+   
+     }
+           
+    
+  
+       #form{
+        margin-top: 10px;
+        padding-top: 10px;
+    width:35%;
+    margin: auto;
+    height:60% ;
+    border: 1px solid gray; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    display: grid;
+    /* padding-left: 15px; */
+    border-radius: 10px;
+        }
+
+        input{
+            width: 80%;
+            height: 30px;
+            /* display: block; */
+             margin: auto;
+             border-radius: 10px;
+        } 
+        #form>label{
+            padding-left: 25px;
+        }
+        #form>p{
+            padding-left: 25px;
+        }
+        #form>input:nth-child(6){
+            background-color: darkblue;
+            color: aliceblue;
+            cursor: pointer;
+            /* padding: 10px; */
+
+        }
+        #form>label:nth-child(1){
+
+            font-size: 35px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="signsorm">
+       <div> <img src="https://images-na.ssl-images-amazon.com/images/G/01/zappos/melody/logo-blue-small._CB485919770_.svg" alt=""></div>
+    <form id="form" >
+        <label for="">Sign-In</label>
+       
+   <label for="">Email</label>
+   <input id="emai" type="email" placeholder="enter email id ">
+   <label for="">password</label>
+   <input id="pass" type="password" placeholder="password">
+   <!-- <label for="">Your name</label>  -->
+  <input type="submit" value="Create Your Zappos Account" >
+<p><a href="sign-up.html">Create Your Zappos Account</a></p>
+</form>
+</div>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",funcsinin)
+    var userDatas=JSON.parse(localStorage.getItem("zapposData"))||[]
+    function funcsinin(){
+        event.preventDefault()
+      var  data={
+         emaildata:form.emai.value,
+            passdata:form.pass.value,
+        }
+        if(signincheck(data.emaildata,data.passdata)===true)
+        {
+            alert("Log in success fully")
+            localStorage.setItem("zapSinupData",JSON.stringify(data))
+            window.location.href="index.html"
+        }
+        else
+        {
+            alert("Wrong Uer Name or Password")
+        }
+    }
+        function signincheck(email,password)
+        {
+            filtered=userDatas.filter(function(elem){
+                return elem.useremail===email&&elem.userpass===password
+            }) 
+            if(filtered.length>0)
+            {
+                return true
+            }
+            else{
+                return false
+            }
+        }
+</script>
