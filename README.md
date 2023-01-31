@@ -1,6 +1,6 @@
 # zappose
 Zappose is leading E-commerce web applicaton which provides wide personal care, accessories &amp; more.  Online Shopping for Women, Men, Kids Fashion &amp; Lifest
-
+https://gleeful-sunflower-815746.netlify.app/
 ## Technology
 **Client** - Html, css, js
 
